@@ -38,8 +38,8 @@ public class alunos {
 		return nomeAluno;
 	}
 
-	public void mediaAluno(double mediaAluno) {
-		mediaAluno = (this.nota1 + this.nota2)/2;
+	public double mediaAluno() {
+		return (nota1 + nota2)/2;
 	}
 	
 }
