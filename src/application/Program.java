@@ -21,9 +21,12 @@ public class Program {
 		double n2 = sc.nextDouble();
 		
 		alunos al = new alunos(cod, nome, n1, n2);
+		//double med = al.mediaAluno(n1, n2);
 		
 		System.out.println(al.getCodAluno());
 		System.out.println(al.getNomeAluno());
+		System.out.println();
+		System.out.println("A média do aluno foi: " + al.mediaAluno());
 		
 		sc.close();
 	}
