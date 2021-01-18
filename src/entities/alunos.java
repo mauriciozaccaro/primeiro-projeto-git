@@ -18,9 +18,9 @@ public class alunos {
 		return "Aluno "
 				+ this.nomeAluno
 				+ " , matrícula Nr° "
-				+this.codAluno
+				+ this.codAluno
 				+ ", recebeu média: "
-				+this.mediaAluno();
+				+ this.mediaAluno();
 	}
 	
 	public double getNota1() {
