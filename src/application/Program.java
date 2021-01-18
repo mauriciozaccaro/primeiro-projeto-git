@@ -13,6 +13,7 @@ public class Program {
 		System.out.println("<<CADASTRO DE ALUNOS>>");
 		System.out.print("Digite o Código: ");
 		int cod = sc.nextInt();
+		sc.nextLine();
 		System.out.print("Digite o Nome: ");
 		String nome = sc.nextLine();
 		System.out.print("Digite a 1º Nota: ");
