@@ -14,6 +14,15 @@ public class alunos {
 		this.nota2 = nota2;
 	}
 	
+	public String toString() {
+		return "Aluno "
+				+ this.nomeAluno
+				+ " , matrícula Nr° "
+				+this.codAluno
+				+ ", recebeu média: "
+				+this.mediaAluno();
+	}
+	
 	public double getNota1() {
 		return nota1;
 	}
