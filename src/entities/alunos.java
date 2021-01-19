@@ -17,7 +17,7 @@ public class alunos {
 	public String toString() {
 		return "Aluno "
 				+ this.nomeAluno
-				+ " , matrícula Nr° "
+				+ ", matrícula Nr° "
 				+ this.codAluno
 				+ ", recebeu média: "
 				+ this.mediaAluno();
