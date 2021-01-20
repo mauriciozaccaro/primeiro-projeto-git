@@ -15,6 +15,23 @@ public class Worker {
 	private Department department;
 	private List<HoursContract> contracts = new ArrayList<>();
 	
+
+	public double income(int year, int month) {
+		double sum = baseSalary;
+		Calendar cal = Calendar.getInstance(); 
+		for(HoursContract c: contracts) {
+			cal.setTime(c.getDate()); // estou setando para o Calendario a data do meu contrato
+			
+			int c_year = cal.get(Calendar.YEAR);// pega o ano da data do contrato
+			int c_month = 1 + cal.get(Calendar.MONTH);// pega o mes +1 (prq o Calendar() começa em 0
+			
+			if(year == c_year && month == c_month) {
+				sum += c.totalValue();		
+			}
+		}
+		return sum;
+	}
+	
 	public Worker() {
 		
 	}
@@ -72,21 +89,6 @@ public class Worker {
 		this.contracts.remove(contract);
 	}
 	
-	public double income(int year, int month) {
-		double sum = baseSalary;
-		Calendar cal = Calendar.getInstance(); 
-		for(HoursContract c: contracts) {
-			cal.setTime(c.getDate()); // estou setando para o Calendario a data do meu contrato
-			
-			int c_year = cal.get(Calendar.YEAR);// pega o ano da data do contrato
-			int c_month = 1 + cal.get(Calendar.MONTH);// pega o mes +1 (prq o Calendar() começa em 0
-			
-			if(year == c_year && month == c_month) {
-				sum += c.totalValue();		
-			}
-		}
-		return sum;
-	}
 
 	
 	
